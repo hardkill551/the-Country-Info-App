@@ -1,7 +1,3 @@
-Aqui está o README atualizado sem os testes no front-end e sem o botão de troca de tema, já que você optou por manter o tema com base na configuração do sistema operacional do usuário. Adicionei também uma explicação sobre como configurar o **Prettier** para formatação automática de código.
-
----
-
 # Country Info App - Front-end
 
 Front-end for the **Country Info App**, a service that provides detailed information about countries, including population data, border countries, and flags.
@@ -84,58 +80,9 @@ npm start
 
 The production build will be served at `http://localhost:3000`.
 
-## Linting and Code Formatting
+## Linting
 
-To maintain code quality and consistent formatting, it's recommended to use **ESLint** for linting and **Prettier** for code formatting.
-
-### Adding Prettier for Code Formatting
-
-1. Install Prettier and its integration with ESLint:
-
-```bash
-npm install --save-dev prettier eslint-config-prettier eslint-plugin-prettier
-```
-
-2. Create a `.prettierrc` file in the root of the project to define your Prettier rules. For example:
-
-```json
-{
-  "semi": true,
-  "singleQuote": true,
-  "trailingComma": "all"
-}
-```
-
-3. Update your **ESLint** configuration in `.eslintrc.js` to include Prettier:
-
-```javascript
-module.exports = {
-  extends: ['next/core-web-vitals', 'plugin:prettier/recommended'],
-  rules: {
-    'prettier/prettier': ['error'],
-  },
-};
-```
-
-4. Add a script to **package.json** to run Prettier:
-
-```json
-{
-  "scripts": {
-    "format": "prettier --write ."
-  }
-}
-```
-
-### Running Prettier
-
-To format your code, run:
-
-```bash
-npm run format
-```
-
-This will format all files according to your Prettier rules.
+This project comes preconfigured with **ESLint** for linting to ensure consistent and clean code.
 
 ### Running ESLint
 
@@ -144,8 +91,6 @@ To check for syntax and code issues:
 ```bash
 npm run lint
 ```
-
-The ESLint configuration ensures that your code follows best practices and integrates with Prettier to enforce consistent formatting rules.
 
 ## Environment Variables
 
@@ -170,6 +115,4 @@ The entire front-end is built with responsiveness in mind using **TailwindCSS**.
 - This project is a **React** and **Next.js** front-end built with **TailwindCSS** for styling.
 - The application fetches country data from a back-end and renders it dynamically.
 - Environment variables are used to configure the API URL.
-- Code quality is maintained using **ESLint** and **Prettier**.
-
-With this README, you'll be able to guide developers on how to set up, run, and maintain the project while ensuring consistent code formatting and quality.
+- Code quality is maintained using **ESLint** for linting.

@@ -137,5 +137,3 @@ When adding new environment variables, follow these steps:
 - This project is a **Node.js** back-end built with **TypeScript**, **Express**, **ESLint**, and **Prettier**.
 - The project requires environment variables to work properly, and these can be configured in `.env` files for different environments.
 - Tests are configured using **Jest** and can be run using the provided npm scripts.
-
-This should give you a well-organized README that fits your project's needs, without Docker and with proper instructions for setting up environment variables for development, production, and testing.
