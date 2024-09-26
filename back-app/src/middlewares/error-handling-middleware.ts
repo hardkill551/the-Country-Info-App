@@ -6,7 +6,9 @@ export function handleApplicationErrors(
   _req: Request,
   res: Response
 ) {
-  if (err.message.includes('Failed to fetch countries')) {
+  const errorMessage = err.message || ''; 
+  
+  if (errorMessage.includes('Failed to fetch countries')) {
     return res.status(httpStatus.BAD_REQUEST).send({
       error: 'BadRequestError',
       message: 'Failed to fetch countries from external API',
