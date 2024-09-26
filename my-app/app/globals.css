@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background-light: #f5f5f5;
+  --foreground-light: #111827;
+  --primary-light: #4f46e5;
+  --secondary-light: #3b82f6;
+
+  --background-dark: #1f2937;
+  --foreground-dark: #f3f4f6;
+  --primary-dark: #818cf8;
+  --secondary-dark: #60a5fa;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--background-dark);
+    --foreground: var(--foreground-dark);
+    --primary: var(--primary-dark);
+    --secondary: var(--secondary-dark);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: var(--background-light);
+    --foreground: var(--foreground-light);
+    --primary: var(--primary-light);
+    --secondary: var(--secondary-light);
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "Inter", sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+button {
+  transition: background 0.3s ease, color 0.3s ease;
+}
